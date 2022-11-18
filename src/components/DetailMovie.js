@@ -10,12 +10,11 @@ const DetailMovie = ({
   genres,
 }) => {
   return (
-    <div id={id}>
+    <div id={id} className="detail">
       <img src={backImg} alt={sTitle} />
       <h2>{title}</h2>
       <p>{rating}/10</p>
       <p>{runtime} minutes</p>
-      <p>Tag</p>
       <ul>{genres && genres.map((g) => <li key={g}>{g}</li>)}</ul>
     </div>
   );

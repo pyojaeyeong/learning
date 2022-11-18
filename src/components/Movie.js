@@ -3,16 +3,16 @@ import { Link } from "react-router-dom";
 
 const Movie = ({ id, coverImg, title, year, summary, genres }) => {
   return (
-    <div>
+    <li className="movie-item">
       <img src={coverImg} alt={title} />
       <h2>
         <Link to={`/movie/${id}`}>
           {title} ({year})
         </Link>
       </h2>
-      <p>{summary}</p>
+      <p>{summary.length > 200 ? `${summary.slice(0, 200)}...` : summary}</p>
       <ul>{genres && genres.map((g) => <li key={g}>{g}</li>)}</ul>
-    </div>
+    </li>
   );
 };
 

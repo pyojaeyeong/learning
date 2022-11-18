@@ -15,11 +15,11 @@ const Detail = () => {
   };
   useEffect(() => {
     getMovie();
-  }, []);
+  });
   return (
     <div>
       {loading ? (
-        <h1>loading...</h1>
+        <h1 className="loading">loading...</h1>
       ) : (
         <DetailMovie
           id={movie.id}
